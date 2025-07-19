@@ -1,0 +1,59 @@
+/* Inlined from assets/Home-Screen-Empty-154-38.css */
+.home-empty-frame {
+  background: #252525;
+  width: 414px;
+  height: 896px;
+  border-radius: 30px;
+  position: relative;
+  overflow: hidden;
+  font-family: 'Inter', Arial, sans-serif;
+  color: #fff;
+}
+.hero-img {
+  position: absolute;
+  left: 110px;
+  top: 110px;
+  width: 195px;
+  height: 27px;
+}
+.notebook-bg {
+  position: absolute;
+  left: 32px;
+  top: 191px;
+  width: 350px;
+  height: 287px;
+  object-fit: contain;
+}
+.fab-ellipse {
+  position: absolute;
+  left: 322px;
+  top: 380px;
+  width: 70px;
+  height: 70px;
+  z-index: 1;
+}
+.fab-add {
+  position: absolute;
+  left: 338px;
+  top: 396px;
+  width: 48px;
+  height: 48px;
+  z-index: 2;
+}
+.add-btn-bg {
+  position: absolute;
+  left: 340px;
+  top: 400px;
+  width: 50px;
+  height: 50px;
+  border-radius: 15px;
+  z-index: 0;
+}
+.info-icon {
+  position: absolute;
+  left: 353px;
+  top: 413px;
+  width: 24px;
+  height: 24px;
+  z-index: 3;
+}
