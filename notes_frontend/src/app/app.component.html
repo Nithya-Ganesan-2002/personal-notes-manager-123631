@@ -1,0 +1,24 @@
+<!-- Modern Desktop/Web Shell Layout for Personal Notes App -->
+<div class="desktop-shell">
+  <header class="app-header">
+    <div class="header-title">📒 Personal Notes</div>
+    <nav class="app-nav">
+      <!-- (extend with nav links/features as needed) -->
+      <span class="nav-user">Welcome, User</span>
+    </nav>
+  </header>
+  <div class="app-layout">
+    <aside class="sidebar">
+      <h3>Categories</h3>
+      <ul>
+        <li><a routerLink="/home" routerLinkActive="active">Home</a></li>
+        <li><a routerLink="/editor" routerLinkActive="active">Editor</a></li>
+        <li><a routerLink="/search-empty" routerLinkActive="active">Search</a></li>
+        <!-- Add more nav items for tags/folders later -->
+      </ul>
+    </aside>
+    <main class="page-content">
+      <router-outlet />
+    </main>
+  </div>
+</div>

@@ -1,0 +1,150 @@
+/* Modern desktop-responsive style for editor component */
+
+.editor-frame {
+  background: #232323;
+  width: 100%;
+  max-width: 625px;
+  min-width: 350px;
+  min-height: 600px;
+  /* adaptive height: */
+  border-radius: 24px;
+  overflow: hidden;
+  position: relative;
+  font-family: 'Inter', Arial, sans-serif;
+  color: #fff;
+  margin: 40px auto;
+  box-shadow: 0 10px 44px #2537412c, 0 2px 6px #0006;
+  display: flex;
+  flex-direction: column;
+}
+
+.editor-header {
+  min-width: 0;
+  width: 100%;
+  min-height: 56px;
+  display: flex;
+  align-items: center;
+  padding: 0 1.2rem;
+  position: relative;
+  z-index: 3;
+  background: transparent;
+  border-bottom: 1px solid #252525;
+}
+.editor-header .back-btn {
+  background: none;
+  border: none;
+  opacity: 0.8;
+}
+
+.editor-header-actions {
+  position: absolute;
+  right: 24px; top: 15px;
+  display: flex;
+  gap: 24px;
+}
+
+.btn-icon {
+  padding: 0;
+  background: none;
+  border: none;
+  width: 44px; height: 44px;
+  display: flex; align-items: center; justify-content: center;
+  cursor: pointer;
+  border-radius: 14px;
+  opacity: 0.82;
+  transition: filter 0.17s, opacity 0.12s;
+}
+.btn-icon:hover { opacity: 1; filter: brightness(1.18); }
+
+.editor-bg {
+  position: absolute;
+  left: 0; top: 0; width: 100%; height: 100%;
+  z-index: 0;
+  background: #232323;
+  opacity: 1;
+}
+
+.editor-content {
+  flex: 1;
+  width: 100%;
+  min-height: 320px;
+  overflow-y: auto;
+  z-index: 2;
+  padding: 32px 48px 24px 48px;
+  box-sizing: border-box;
+}
+.editor-title {
+  font-size: 1.65rem;
+  font-weight: 600;
+  color: #fff;
+  margin-bottom: 18px;
+  letter-spacing: -0.01rem;
+}
+.editor-body {
+  font-size: 1.09rem;
+  color: #eee;
+}
+
+.editor-formatting-bar {
+  position: absolute;
+  left: 28px; right: 28px; bottom: 95px;
+  width: unset;
+  max-width: calc(100% - 56px);
+  min-width: 280px;
+  height: 33px;
+  border: none;
+  background: transparent;
+  z-index: 9;
+}
+
+/* .editor-actions affixed to bottom, not absolute */
+.editor-actions {
+  width: 100%;
+  min-height: 56px;
+  background: #222225;
+  border-radius: 0 0 24px 24px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 0 2.5rem 0 0;
+  margin-top: 0.8rem;
+  box-sizing: border-box;
+  border-top: 1.5px solid #232339;
+  gap: 1.2rem;
+  position: relative;
+  z-index: 10;
+}
+.action-btn {
+  background: #1976d2;
+  width: 42px;
+  height: 42px;
+  border: none;
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  transition: background 0.18s;
+}
+.action-btn:hover { background: #328fe3; }
+
+.editor-popup {
+  position: absolute;
+  left: 50%; top: 45%;
+  transform: translate(-50%, -50%);
+  width: 330px; height: 236px;
+  background: transparent;
+  border: none;
+  z-index: 99;
+  display: none;
+}
+
+/* Responsive widening for wide screens */
+@media (max-width: 880px) {
+  .editor-frame { max-width: 99vw; }
+  .editor-content, .editor-formatting-bar { padding-left: 16px; padding-right: 16px; }
+}
+
+@media (max-width: 600px) {
+  .editor-frame { border-radius: 16px; }
+  .editor-header, .editor-actions { border-radius: 0 0 16px 16px; }
+  .editor-content { padding: 16px; }
+  .editor-formatting-bar { left: 5px; right: 5px; }
+}
